@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caravan</title>
+
+    <link rel="stylesheet" href="Boostrap/dist/css/bootstrap.css">
+</head>
+
+
+
+
+<body>
+
+
+    <nav class="navbar navbar-expand-md navbar-light bg-light navbar-padding fixed-top py-3 shadow-sm p-3 mb-5 bg-white rounded">
+        <!--navbar = create a nav area-->
+        <!--bg-light = give a color for background -->
+        <!--expand-md = expand in medium screen-->
+        <a href="index.html" class="navbar-brand">
+            <img src="/img/caravan.svg" alt="Caravan">
+        </a>
+        <!--navbar-brand= for your company, product, or project name-->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--navbar-toggler= give a style for button-->
+        <!--atributos com data, estão sendo manipulados pelo javascript-->
+        <!--aria = acessesibilidade-->
+        <!--navbar-toggler-icon= -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!--Tudo que estiver na div vai ser escondido quando não clicado-->
+            <!--navbarSupportedContent = liga a data-bs-target a div com id-->
+            <ul class="navbar-nav ms-auto">
+                <!--navbar-nav= give a style for navs
+                nl-auto= margin left auto -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Locais</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a href="locais.html" class="dropdown-item">California</a>
+                            <a href="locais.html" class="dropdown-item">Paris</a>
+                            <a href="locais.html" class="dropdown-item">Dublin</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="planos.html" class="nav-link">Planos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="contato.html" class="nav-link">Contato</a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a href="#" class="nav-link">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-outline-primary ms-md-2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Inscreva-se</a>
+                        <!--ms md 2 = 
+                            ms = margin left, 
+                            md = acima do medio(expande-md), 
+                            2 = adiciona 2/abaixo do medio, nada-->
+                    </li>
+            </ul>
+        </div>
+        
+    </nav>
+
+    <!-- Button trigger modal -->
+    
+    
+    <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Inscreva-se</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">E-mail</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Senha</label>
+                          <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                          <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                          <label class="form-check-label" for="exampleCheck1">Se manter conectado</label>
+                        </div>
+                    </form>
+
+                </div>
+                <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary">Inscrever-se</button>
+                </div>
+            </div>
+            </div>
+        </div>
+    <!-- Modal -->
+
+    <section class="container-fluid text-white">
+        <div class="row bg-dark">
+            <div class="col-lg-7 p-0">
+                <div id="carouselCity" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselCity" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselCity" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselCity" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="carousel-caption d-md-block">
+                                <h3 class="display-4">California</h3>
+                              </div>
+                            <img src="/img/california.jpg" class="d-block w-100" alt="California">
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-caption  d-md-block">
+                                <h3 class="display-4">Paris</h3>
+                              </div>
+                            <img src="/img/paris.jpg" class="d-block w-100" alt="Paris">
+                        </div>
+                        <div class="carousel-item">
+                            <div class="carousel-caption  d-md-block">
+                                <h3 class="display-4">Dublin</h3>
+                              </div>
+                            <img src="/img/dublin.jpg" class="d-block w-100" alt="Dublin">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselCity" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselCity" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>     
+            </div>
+            <div class="col-lg-5 p-4">
+                <h1 class="display-4">Realize a viagem do seu sonho</h1>
+                <p class="lead">O melhor local para sua viagem é com Caravan, mais de 5.000 excursões concluídas!</p>
+                <form action="" >
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="E-mail" aria-label="E-mail" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="button">Inscreva-se</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+     
+    <section class="py-5 bg-light text-center">
+        <div class="container">
+            <div class="my-5">
+                <span class="h6 d-block">TUDO DE MELHOR PARA VOCÊ</span>
+                <h2 class="display-4 text-primary">Aproveita as vantagens</h2>
+            </div>
+            <div class="row">
+                <div class="col-xl-4 col-md-6">
+                    <img class="icon" src="/img/icones/passaporte.svg">
+                    <h3>Documentos</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, nemo nulla.</p>
+                </div>
+
+                <div class="col-xl-4 col-md-6">
+                    <img class="icon" src="/img/icones/passagens.svg">
+                    <h3>Passagens</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, nemo nulla.</p>
+                </div>
+
+                <div class="col-xl-4 col-md-6">
+                    <img class="icon" src="/img/icones/translado.svg">
+                    <h3>Translado</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, nemo nulla.</p>
+                </div>
+
+                <div class="col-xl-4 col-md-6">
+                    <img class="icon" src="/img/icones/praias.svg">
+                    <h3>Praias</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, nemo nulla.</p>
+                </div>
+
+                <div class="col-xl-4 col-md-6">
+                    <img class="icon" src="/img/icones/bagagens.svg">
+                    <h3>Bagagens</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, nemo nulla.</p>
+                </div>
+
+                <div class="col-xl-4 col-md-6">
+                    <img class="icon" src="/img/icones/turismo.svg">
+                    <h3>Turismo</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, nemo nulla.</p>
+                </div>
+            </div>
+        <a href="planos.html" class="btn btn-primary btn-lg mt-4">Comprar planos</a>
+        </div>
+    </section>
+
+
+    <section id="home-quote" class="p-md-5">
+        <blockquote class="blockquote text-center text-white p-md-5 p-3">
+            <p class="display-4"><em>"A felicidade não está na estrada que leva a algum lugar. A felicidade é a própria estrada."</em></p>
+            <footer class="blackquote-footer text-white">— Bob Dylan</footer>
+        </blockquote>
+    </section>
+
+    <section class="container">
+        <div class="my-5 text-center">
+            <span class="h6 d-block">AINDA ESTÁ COM DUVIDAS?</span>
+            <h2 class="display-4 text-primary">Perguntas Frequentes</h2>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="accordion accordion-flush row justify-content-center col-6" id="accordionFlushExample">
+
+                <div class="accordion-item">
+                    <a link="#" class="text-decoration-none" id="flush-headingTwo">
+                      <p class="collapsed lead" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                          → É possível cancelar a viagem?
+                        </p>
+                    </a>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, nemo nulla.
+                            </p>
+                        </div>
+                  </div>
+                
+                <div class="accordion-item">
+                  <a link="#" class="text-decoration-none" id="flush-headingTwo">
+                    <p class="collapsed lead" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                        → Que garantia eu tenho se perder o voo?
+                        </p>
+                    </a>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, nemo nulla.
+                        </p>
+                    </div>
+                </div>
+              
+                <div class="accordion-item">
+                  <a link="#" class="text-decoration-none" id="flush-headingThree">
+                    <p class="collapsed lead" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                        → Qual a principal forma de viagem?
+                        </p>
+                    </a>
+                    
+                    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, nemo nulla.
+                        </p>
+                    </div>
+                </div>
+    
+
+                <div class="text-center my-4">
+                    <p class="small">FALE CONOSCO PARA MAIS DUVIDAS</p>
+                    <a href="#" class="btn  btn-primary text-decoration-none">Entre em Contato</a>
+                </div>
+              </div>
+    </section>
+
+    
+    <footer class="bg-dark text-white">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-3 col-6">
+                    <h4 class="h6">PÁGINAS</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none">Planos</a></li>
+                        <li><a href="#" class="text-decoration-none">Contato</a></li>
+                        <li><a href="#" class="text-decoration-none">Inscreva-se</a></li>
+                    </ul>
+                </div>
+
+            
+                <div class="col-md-3 col-6">
+                    <h4 class="h6">LOCAIS</h4>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none">California</a></li>
+                        <li><a href="#" class="text-decoration-none">Paris</a></li>
+                        <li><a href="#" class="text-decoration-none">Dublin</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4 col-6">
+                    <h4 class="h6">DADOS DE CONTATO</h4>
+                    <ul class="list-unstyled text-secondary">
+                        <li><a href="#" class="text-decoration-none">E-mail: igortamuz@gmail.com</a></li>
+                        <li><a href="#" class="text-decoration-none">Linkedin: Igor Tamuz</a></li>
+                        <li><a href="#" class="text-decoration-none">Instagram: zeus.avi</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-2 col-6">
+                    <h4 class="h6">REDES SOCIAIS</h4>
+                    <ul class="list-unstyled d-grid d-md-block">
+                        <li><a href="#" class="text-decoration-none btn btn-outline-secondary col-9">Facebook</a></li>
+                        <li><a href="#" class="text-decoration-none btn btn-outline-secondary col-9 my-2">Linkedin</a></li>
+                        <li><a href="#" class="text-decoration-none btn btn-outline-secondary col-9">Instagram</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+    </footer>
+
+    <script src="/Boostrap/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
